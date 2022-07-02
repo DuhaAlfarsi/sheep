@@ -31,16 +31,16 @@ body {
   place-items: center;
   justify-content: center;
   place-content: center;
-  animation: jump 5s infinite linear;
+  animation: jump 1s alternate infinite ease;
 }
 @keyframes jump {
   from {
-    transform: translateY(100px);
-    transform: scale(2);
+    transform: translateY(0px);
+   
   }
   to {
     transform: translateY(-100px);
-    transform: scale(1);
+  
   }
 }
 .sheep-body {
@@ -148,16 +148,16 @@ body {
   height: 20px;
   clip-path: circle(44.8% at 50% 0);
   transform: translate(20px, 40px);
-  animation: mouth 5s infinite;
+  animation: mouth 1s alternate infinite;
 }
 
 @keyframes mouth {
   from{
-    transform: scale(1);
-    transform: translate(20px, 40px);
+    transform: translate(20px, 40px) scale(1);
+   
   }
   to {
-    transform: translate(20px, 40px);
+    transform: translate(20px, 40px) scaleY(2);
   }
 }
 
@@ -169,13 +169,49 @@ body {
   transform: translate(29px, 78px);
   z-index: -1;
   border-radius: 50%;
+
 }
+
+
+
 
 .leg.left {
   left: 14%;
+  animation: moveLeg  1s alternate infinite;
 }
 .leg.right {
   right: 43%;
+  animation: moveLeg1  1s alternate infinite;
+}
+
+
+@keyframes moveLeg {
+  0% {
+    transform: translate(29px, 78px) rotate(0deg);
+   
+  }
+  50% {
+    transform: translate(29px, 78px) rotate(20deg);
+  
+  }
+  100% {
+    transform: translate(29px, 78px) rotate(0deg);
+  
+  }
+}
+@keyframes moveLeg1 {
+  0% {
+    transform: translate(29px, 78px) rotate(0deg);
+   
+  }
+  50% {
+    transform: translate(29px, 78px) rotate(-20deg);
+  
+  }
+  100% {
+    transform: translate(29px, 78px) rotate(0deg);
+  
+  }
 }
 
 h1 {
