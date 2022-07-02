@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Cairo:wght@200;300;400;500;600;700;800;900&family=Comfortaa:wght@300&family=Dancing+Script&family=Lobster&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  place-content: center;
+  font-family: "ABeeZee", sans-serif;
+  font-family: "Cairo", sans-serif;
+  font-family: "Comfortaa", cursive;
+  font-family: "Dancing Script", cursive;
+  height: 100vh;
+  background: rgb(238, 174, 202);
+  background: linear-gradient(
+    173deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(146, 212, 142, 1) 100%
+  );
+  animation: move 10s infinite linear;
+}
+
+@keyframes move {
+  0% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+.sheep {
+  width: 200px;
+  height: 300px;
+  position: relative;
+}
+
+.sheep-body {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+}
+
+.sheep-body.left {
+  left: 0;
+}
+
+.sheep-body.right {
+  right: 0;
+}
+
+.sheep-body::after {
+  content: "";
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: 35px;
+}
+
+.sheep-body::before {
+  content: "";
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: -35px;
+}
+
+.sheep-body.left::before {
+  left: 35px;
+}
+
+.sheep-body.right::before {
+  right: 35px;
+}
+
+.sheep-body.left::after {
+  left: 35px;
+}
+
+.sheep-body.right::after {
+  left: -35px;
+}
+.head {
+  width: 60px;
+  height: 60px;
+  background: black;
+  border-radius: 50%;
+  z-index: 1;
+  transform: translate(-129px, -115px);
+}
+
+.head::before {
+  content: "";
+  position: absolute;
+  background: black;
+  width: 15px;
+  height: 20px;
+  top: -7px;
+  left: 9px;
+  border-radius: 50%;
+}
+
+.head::after {
+  content: "";
+  position: absolute;
+  background: black;
+  width: 15px;
+  height: 20px;
+  right: 7px;
+  top: -6px;
+  border-radius: 50%;
+}
+.eye {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  background: black;
+  top: 15px;
+  border: 3px solid white;
+}
+
+.eye.left {
+  left: 10px;
+}
+.eye.right {
+  right: 10px;
+}
+.mouth {
+  position: absolute;
+  background: white;
+  width: 20px;
+  height: 20px;
+  clip-path: circle(44.8% at 50% 0);
+  transform: translate(20px, 40px);
+}
+
+.leg {
+  position: absolute;
+  background: black;
+  height: 50px;
+  width: 20px;
+  transform: translate(4px, -39px);
+  z-index: -1;
+  border-radius: 50%;
+  animation: move2 3s infinite linear;
+}
+
+.leg.left {
+  left: 30%;
+}
+.leg.right {
+  right: 43%;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 300;
+  margin-right: -192px;
+  animation: text 5s ease-in-out infinite;
+}
+
+
