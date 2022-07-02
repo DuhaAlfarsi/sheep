@@ -21,8 +21,16 @@ body {
     rgba(238, 174, 202, 1) 0%,
     rgba(146, 212, 142, 1) 100%
   );
+  animation: jump 5s infinite linear;
 }
-
+@keyframes jump {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
 .sheep {
   width: 200px;
   height: 300px;
@@ -134,6 +142,18 @@ body {
   height: 20px;
   clip-path: circle(44.8% at 50% 0);
   transform: translate(20px, 40px);
+  animation: mouth 5s infinite linear;
+}
+
+@keyframes mouth {
+  from {
+    transform: scale(0);
+    
+  }
+  to {
+    
+    transform: scale(1);
+  }
 }
 
 .leg {
