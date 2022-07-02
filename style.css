@@ -36,9 +36,11 @@ body {
 @keyframes jump {
   from {
     transform: translateY(100px);
+    transform: scale(2);
   }
   to {
     transform: translateY(-100px);
+    transform: scale(1);
   }
 }
 .sheep-body {
@@ -146,15 +148,16 @@ body {
   height: 20px;
   clip-path: circle(44.8% at 50% 0);
   transform: translate(20px, 40px);
-  animation: mouth 5s infinite linear;
+  animation: mouth 5s infinite;
 }
 
 @keyframes mouth {
-  from {
-    transform: scale(0);
+  from{
+    transform: scale(1);
+    transform: translate(20px, 40px);
   }
   to {
-    transform: scale(1);
+    transform: translate(20px, 40px);
   }
 }
 
