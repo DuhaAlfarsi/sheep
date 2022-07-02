@@ -137,7 +137,7 @@ body {
 }
 
 .leg {
-  position: relative;
+  position: absolute;
   background: black;
   height: 50px;
   width: 20px;
