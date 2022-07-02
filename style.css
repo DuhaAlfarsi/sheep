@@ -21,6 +21,16 @@ body {
     rgba(238, 174, 202, 1) 0%,
     rgba(146, 212, 142, 1) 100%
   );
+}
+
+.sheep {
+  width: 200px;
+  height: 300px;
+  position: relative;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  place-content: center;
   animation: jump 5s infinite linear;
 }
 @keyframes jump {
@@ -31,12 +41,6 @@ body {
     transform: translateY(-100px);
   }
 }
-.sheep {
-  width: 200px;
-  height: 300px;
-  position: relative;
-}
-
 .sheep-body {
   width: 70px;
   height: 70px;
@@ -94,7 +98,7 @@ body {
   background: black;
   border-radius: 50%;
   z-index: 1;
-  transform: translate(-129px, -115px);
+  position: absolute;
 }
 
 .head::before {
@@ -148,10 +152,8 @@ body {
 @keyframes mouth {
   from {
     transform: scale(0);
-    
   }
   to {
-    
     transform: scale(1);
   }
 }
@@ -161,13 +163,13 @@ body {
   background: black;
   height: 50px;
   width: 20px;
-  transform: translate(4px, -39px);
+  transform: translate(29px, 78px);
   z-index: -1;
   border-radius: 50%;
 }
 
 .leg.left {
-  left: 30%;
+  left: 14%;
 }
 .leg.right {
   right: 43%;
